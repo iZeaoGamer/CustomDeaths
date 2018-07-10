@@ -1,0 +1,9 @@
+---
+name: CustomDeaths
+version: 1.0.0
+main: CustomDeaths\Main
+api: 3.0.0
+author: ArceusMatt
+description: Make your own death messages.
+website: https://github.com/arceusmatt
+...
