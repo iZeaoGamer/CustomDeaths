@@ -35,7 +35,8 @@ use pocketmine\event\player\PlayerDeathEvent;
 		  if($cause instanceof EntityDamageByEntityEvent){
 		$killer = $cause->getDamager();
 		$weapon = $killer->getInventory()->getItemInHand()->getName();
-		$death = str_replace(["{player}", "{killer}", "{line}", "{weapon}"], [$ent->getName(), $killer->getName(), "\n", $weapon], $message);
+		$health = $killer->getHealth();
+		$death = str_replace(["{player}", "{killer}", "{line}", "{weapon}", "{health}"], [$ent->getName(), $killer->getName(), "\n", $weapon, $health], $message);
 		$event->setDeathMessage($death);
 		  }
 		}
