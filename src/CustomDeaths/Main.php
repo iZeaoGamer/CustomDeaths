@@ -37,7 +37,7 @@ use pocketmine\event\player\PlayerDeathEvent;
 		$weapon = $killer->getInventory()->getItemInHand()->getName();
 		$health = $killer->getHealth();
 		$maxhealth = $killer->getMaxHealth();
-		$death = str_replace(["{player}", "{killer}", "{line}", "{weapon}", "{health}", "{maxhealth)"], [$ent->getName(), $killer->getName(), "\n", $weapon, $health, $maxhealth], $message);
+		$death = str_replace(["{player}", "{killer}", "{line}", "{weapon}", "{health}", "{maxhealth}"], [$ent->getName(), $killer->getName(), "\n", $weapon, $health, $maxhealth], $message);
 		$event->setDeathMessage($death);
 		  }
 		}
